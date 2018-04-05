@@ -1,0 +1,12 @@
+	<div class="ui inverted segment">
+		<div class="ui inverted relaxed divided list">
+		{% for project in projects %}
+			<div class="item">
+				<div class="content">
+				<div class="header">{{ project.name }}</div>
+					{{ project.description }}
+				</div>
+			</div>
+		{% endfor %}
+		</div>
+	</div>

@@ -1,0 +1,10 @@
+<div class="ui icon message {{ type }}">
+  <i class="ui question circle icon"></i>
+  <div class="content">
+     {{ message | raw }}
+    <div class="ui divider"></div>
+    <button id='cancel-btn' class="ui right floated button">Cancel</button>
+    <button id='confirm-btn' class="ui negative right floated button">Confirm</button>
+  </div>
+</div>
+{{ script_foot | raw }}

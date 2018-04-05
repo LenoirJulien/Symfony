@@ -1,0 +1,19 @@
+<h2 class="ui header">
+  <i class="folder open icon"></i>
+  <div class="content">
+    {{ project.name }}
+    <div class="sub header"></div>
+  </div>
+</h2>
+<h3 class="ui header">Stories</h3>
+<a href="#" id="add-story-bt" class="ui button nav-stories" data-ajax="project/addStory">
+	<i class="ui plus icon"></i>
+	Add Story in project...
+</a>
+<a href="{{ path('projects') }}" id="back-to-project-bt" class="ui button nav-stories" data-ajax="projects">
+	<i class="caret square left icon"></i>
+	Back to projects
+</a>
+<div class="ui divider"></div>
+{{ q["list-stories"] | raw }}
+{{ script_foot | raw }}

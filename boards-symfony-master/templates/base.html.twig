@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/semantic.min.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+    	<div class="ui container">
+    	{% block menu %}
+    	<div class="ui inverted segment">
+			<div id="menu" class="ui inverted secondary menu">
+				<a href="{{ path("index") }}" class="active item">
+					Home
+				</a>
+				<a href="{{ path("projects") }}" class="item" data-ajax="projects">
+					Projects
+				</a>
+				<a href="{{ path("developers") }}" class="item" data-ajax="developers">
+					Developers
+				</a>
+				<a href="{{ path("tags") }}" class="item" data-ajax="tags">
+					Tags
+				</a>
+				<a href="{{ path("steps") }}" class="item" data-ajax="steps">
+					Steps
+				</a>
+				<a href="{{ path("tasks") }}" class="item" data-ajax="tasks">
+					Tasks
+				</a>
+			</div>
+		</div>
+    	{% endblock %}
+    	<div id="block-body">
+            {% block body %}{% endblock %}
+        </div>
+        </div>
+        {% block javascripts %}
+        <script src="{{ asset('assets/jquery-3.3.1.min.js') }}"></script>
+		<script src="{{ asset('assets/semantic.min.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
